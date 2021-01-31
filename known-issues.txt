@@ -1,0 +1,20 @@
+Known Issues with SmartGit
+==========================
+Linux
+-----
+* SmartGit must be started using bin/smartgit.sh.
+
+* tar.gz-bundle: To install a menu item or a launcher link use
+  bin/add-menuitem.sh. Don't just try to pin the launched SmartGit instance to
+  the Unity launcher, because clicking this will not launch the script and
+  might cause hard crashes, e.g. because of
+  https://bugs.eclipse.org/bugs/show_bug.cgi?id=419729
+  where the work-around requires certain environment variables be set.
+
+* KDE desktop with oxygen-gtk theme crashes when a combobox needs to be shown:
+  http://www.syntevo.com/blog/?p=4143
+
+* If SmartGit hangs when trying to open the Log, please add following line to
+  ~/.smartgit/smartgit.vmoptions:
+  
+  -DSWT_GTK3=1
